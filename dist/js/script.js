@@ -1,38 +1,35 @@
+// Declarations
 
-var list = document.querySelector('ul');
-var userInput = document.querySelector('#input');
-var form = document.querySelector('form');
-var btn = document.querySelector('button');
-var todoArrey = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
+const todo_list = document.querySelector('ul');
+const user_input = document.querySelector('#input');
+const user_form = document.querySelector('form');
+const clear_all_action = document.querySelector('button');
+const todo_array = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
 
+// Functions
 
-localStorage.setItem('todos',JSON.stringify(todoArrey));
+const addToList = todo_string => {
+    let todo_item = document.createElement('li')
+    todo_item.textContent = todo_string;
+    todo_list.appendChild(todo_item)
+}
 
-var storage = JSON.parse(localStorage.getItem('todos'));
+todo_array.forEach(item => addToList(item))
+
+// Events
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    todoArrey.push(userInput.value);
-    localStorage.setItem('todos',JSON.stringify(todoArrey));
-    todoMaker(userInput.value);
-    userInput.value = "";
+    todo_array.push(user_input.value);
+    localStorage.setItem('todos',JSON.stringify(todo_array));
+    addToList(user_input.value);
+    user_input.value = "";
 })
 
-var todoMaker = function(text) {
-    var todo = document.createElement('li')
-    todo.textContent = text;
-    list.appendChild(todo)
-}
-
-for (let i = 0; i < storage.length; i++ ) {
-    
-    todoMaker(storage[i]);
-}
-
-btn.addEventListener('click',() => {
+clear_all_action.addEventListener('click',() => {
     window.localStorage.clear();
-    while (list.firstChild) {
-        list.removeChild(list.firstChild)
+    while (todo_list.firstChild) {
+        todo_list.removeChild(todo_list.firstChild)
     }
 });
 
