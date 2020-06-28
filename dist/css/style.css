@@ -17,7 +17,7 @@ body {
 }
 #block {
     text-align: end;
-    background-color:#7c7d7d57 ;
+    background-color:rgba(229, 231, 228, 0.4) ;
     width: 70%;
     height: 60%;
     margin: 32px auto 0 auto;
@@ -94,22 +94,23 @@ li {
     margin: 16px;
 }
 #btn {
-    font-size: 24px;
+    font-size: 29px;
     text-transform: uppercase;
     width: 192px;
     height: 48px;
     border: 0;
     border-radius: 8px;
-    color: #e1f4f3;
-    background-color: #222831;
+    color: #e3e5e0;
+    background-color: #000000;
     cursor: pointer;
-    box-shadow: -3px 17px 18px -10px rgba(45,47,51,0.93);}
+    box-shadow: 8px 8px 12px -1px rgba(0,0,0,0.5);
+}
 #btn:hover {
     color: white;
     background-color: black;
     width: 200px ;
     height: 52px;
-    box-shadow: -3px 17px 39px 9px rgba(45,47,51,0.93);
+    box-shadow: 3px 23px 64px 1px rgba(0,0,0,0.3)
 }
 
 /* 706c61 */
