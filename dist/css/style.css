@@ -7,15 +7,17 @@
 body {
     width: 100%;
     height: 100vh;
-    background-color: #222831;
+    background-image: url(../img/BG.jpg);
 }
 #title {
     padding-top: 8%;
-    color: #eeeeee;
+    color: #000000;
+    font-family: cursive;
+
 }
 #block {
     text-align: end;
-    background-color:#e1f4f3 ;
+    background-color:#7c7d7d57 ;
     width: 70%;
     height: 60%;
     margin: 32px auto 0 auto;
@@ -34,12 +36,11 @@ body {
 
 }
 .card {
-    margin: 0 auto;
     width: 40%;
     height: 80%;
     border-radius: 8px;
     margin: 5% auto;
-    box-shadow: inset -2px 7px 73px -34px rgba(34,40,49,1);
+    box-shadow: inset 38px 50px 30px -57px rgba(40,40,49,1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,6 +49,8 @@ body {
 .titre {
     color: #393e46;
     padding-top: 24px;
+    font-family: cursive;
+
 }
 form {
     height: 100%;
@@ -55,13 +58,14 @@ form {
     
 }
 #input {
-    background-color:#ecf7f6;
+    background-color: #ffffff;
     width: 80%;
     height: 90%;
     border: 1px solid rgba(0, 0, 0, 0.089);
-    border-radius: 6px;
-    box-shadow: inset -2px 6px 50px -40px rgb(103, 113, 129);
+    border-radius: 7px 1PX 0px 0px;
+    box-shadow: inset 72px 104px 51px -120px rgb(51, 87, 150);
     font-size: 20px;
+
 }
 #input::placeholder {
     font-size: 16px;
@@ -80,9 +84,10 @@ form {
 li {
     width: 80%;
     margin-top: 16px;
-    background-color: #44474b3a;
+    background-color: #ffffff;
     padding: 16px;
-    border-radius: 10px;
+    box-shadow: inset 0px 1px 2px 0px rgb(116, 118, 127);
+    border-radius: 0px 54px 50PX 0px;
 }
 
 .btn {
